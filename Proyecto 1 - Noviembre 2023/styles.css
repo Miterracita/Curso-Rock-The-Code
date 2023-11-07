@@ -1,0 +1,467 @@
+
+@import url('https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@300;400;500&family=Varela+Round&display=swap');
+
+
+:root {
+    --primary-color--green: #5FD788;
+    --secundary-color--grey: #F9FAFB;
+    --txt-color-white: #fff;
+    --txt-color-black: #000;
+    --txt-color-grey: #9CA3AF;
+    --txt-font-title: 'M PLUS Rounded 1c', sans-serif;
+}
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Varela Round', sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: var(--txt-color-black);
+}
+
+h1 {
+    font-family: var(--txt-font-title);
+    color: var(--primary-color--green);
+    font-size: 96px;
+}
+
+p {
+    color: var(--txt-color-grey);
+    font-size: 14px;
+}
+
+button {
+    border: none;
+    border-radius: 8px;
+    padding: 20px;
+    background: var(--primary-color--green, #5FD788);
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 97.9%; /* 15.664px */
+    letter-spacing: 0.16px;
+    text-transform: uppercase;
+    color: var(--txt-color-white);
+    cursor: pointer;
+}
+
+button:hover {
+    background: var(--txt-color-black);
+}
+.reverse{
+    border: none;
+    border-radius: 8px;
+    padding: 20px;
+    background: var(--txt-color-white, #fff);
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 97.9%; /* 15.664px */
+    letter-spacing: 0.16px;
+    text-transform: uppercase;
+    color: var(--txt-color-black);
+    cursor: pointer;
+    min-width: 200px;
+}
+.reverse:hover{
+    background: var(--txt-color-black);
+    color: var(--txt-color-white);
+}
+
+nav {
+    height: 70px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 100px;
+}
+nav li {
+    display: inline-block;
+    margin-right: 20px;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+nav li:hover a{
+    color: var(--primary-color--green);
+}
+
+nav li:last-child {
+    margin-right: 0px;
+}
+
+/*SECCIONES*/
+#b-kiwi-mint,
+#b-aromatherapy,
+#best-sellers,
+#b-our-luxury,
+#trends {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.kiwi-mint-right {
+    width: 60%;
+    height: 800px;
+}
+.kiwi-mint-right img {
+    position: absolute;
+    right: 0;
+    top:70px;
+}
+.index-50 {
+    z-index: 50;
+    margin-top:30px;
+}
+.kiwi-mint-left {
+    padding: 100px;
+}
+.kiwi-mint-left h1 {
+    line-height: 90%;
+    margin-bottom: 40px;
+}
+.kiwi-mint-left p {
+    width: 70%;
+}
+/**/
+.nav-sections {
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+    margin: 100px 0;
+}
+.nav-sections li {
+    padding: 70px;
+    display: inline-block;
+    border-radius: 0px 20px;
+    background: var(--secundary-color--grey, #F9FAFB);
+    box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.15);
+}
+.nav-sections li:hover {
+    background: var(--primary-color--green, #5FD788);
+    color: var(--txt-color-white)
+}
+
+.nav-sections li:hover p{
+    color: var(--txt-color-white, #fff);
+}
+.nav-sections a{
+    text-decoration: none;
+    cursor: pointer;
+} 
+.nav-sections p {
+    color: var(--primary-color--green, #5FD788);
+    text-align: center;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 140%;
+}
+/**/
+.b-aromatherapy-right {
+    text-align: right;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    padding: 100px;
+}
+.b-aromatherapy-right h2 {
+    color: var(--primary-color--green);
+    font-size: 50px;
+    margin-bottom: 50px;
+}
+.b-aromatherapy-right p {
+    width: 50%;
+    margin-bottom: 50px;
+}
+/**/
+.best-sellers-button,
+.trends-button {
+    background-image: url('img/flower.png');
+    background-repeat: no-repeat;
+    padding: 100px;
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.best-sellers-button h3,
+.trends-button h3 {
+    color: var(--primary-color--green);
+    font-size: 50px;
+    margin-bottom: 50px;
+}
+.best-sellers-products,
+.trends-products {
+    padding: 60px;
+}
+.product-list{
+    display: flex;
+    justify-content: center;
+    gap:20px;
+}
+.best-sellers-products li,
+.trends-products li {
+    text-decoration: none;
+    display: flex;
+    align-items: end;
+    justify-content: center;
+}
+.best-sellers-products a,
+.trends-products a {
+    text-decoration: none;
+    cursor: pointer;
+}
+.box-product {
+    border-radius: 0px 20px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 383px;
+    height: 386px;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+}
+.product-1{
+    background-image: url('img/producto-1.png');
+}
+.product-2{
+    background-image: url('img/producto-2.png');
+}
+.content-product {
+    display: flex;
+    padding: 20px;
+    bottom: 0;
+    border-radius: 0px 20px;
+    background: rgba(255, 255, 255, 0.75);
+    backdrop-filter: blur(12.5px);
+}
+/**/
+#trends{
+    margin: 100px 0;
+}
+.trends-button {
+    background-image: url('img/Vector.png');
+}
+.product-3{
+    background-image: url('img/producto-3.png');
+}
+.product-4{
+    background-image: url('img/producto-4.png');
+}
+
+/**/
+.b-our-luxury-left {
+    padding: 100px;
+    background-color: var(--primary-color--green);
+    width: 60%;
+    min-height: 515px;
+}
+.b-our-luxury-left h3 {
+    color: var(--txt-color-white, #FFF);
+    font-size: 50px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 119.4%;
+    letter-spacing: 0.5px;
+    margin-bottom: 40px;
+}
+.b-our-luxury-right {
+    background-image: url('img/Image.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 40%;
+    min-height: 515px;
+}
+
+/**/
+footer {
+    background-color: var(--secundary-color--grey, #F3F4F6);
+    padding: 50px;
+}
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap:20px;
+}
+.links-footer {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 150px;
+}
+.links-footer li {
+    list-style: none;
+    font-size: 12px;
+    line-height: 200%;
+}
+.links-footer li:first-child a {
+    color: var(--primary-color--green);
+    font-size: 14px;
+    font-weight: 600;
+}
+.links-footer a {
+    color: var(--txt-color-grey);
+}
+.copyright-footer {
+    text-align: center;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+@media screen and (min-width: 376px) and (max-width:767px){
+    .nav-sections,
+    #b-aromatherapy,
+    #b-our-luxury,
+    #best-sellers,
+    #trends,
+    #b-kiwi-mint {
+        flex-direction: column;
+    }
+    #b-kiwi-mint{
+        flex-direction: column-reverse;
+    }
+    .kiwi-mint-right {
+        width: 100%;
+        position: relative;
+        height: 400px;
+    }
+    .kiwi-mint-right img{
+        width: 100%;
+        top:10px;
+    }
+    .kiwi-mint-left {
+        padding: 100px 25px;
+        text-align: center;
+    }
+    .kiwi-mint-left p {
+        width: 100%;
+    }
+    .kiwi-mint-left h1{
+        font-size: 60px;
+    }
+    /**/
+    .nav-sections{
+        width: 275px;
+        gap:25px;
+        margin:0 auto;
+    }
+    nav {
+        padding: 20px;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        height: 150px;
+    }
+
+    /**/
+    #b-aromatherapy{
+        margin: 100px 0;
+    }
+    #b-aromatherapy img{
+        width: 100%;
+    }
+    .b-aromatherapy-right {
+        padding: 0 25px 0 0;
+        text-align: center;
+        width: 100%;
+        align-items: center;
+    }
+    .b-aromatherapy-right p {
+        width: 100%;
+    }
+    .b-aromatherapy-right h2 {
+        font-size: 40px;
+    }
+
+    /**/
+    .best-sellers-button, .trends-button {
+        width: 100%;
+    }
+    .best-sellers-products, .trends-products{
+        padding: 20px;
+    }
+    .product-list {
+        flex-direction: column;
+    }
+    /**/
+    #b-our-luxury{
+        margin: 100px 0;
+    }
+    .b-our-luxury-left {
+        padding: 50px;
+        width: 100%;
+    }
+    .b-our-luxury-left h3 {
+        font-size: 38px;
+    }
+    .b-our-luxury-right{
+        width: 100%;
+    }
+
+    .links-footer {
+        gap: 30px;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width:1024px){
+    .nav-sections,
+    #best-sellers,
+    #trends{
+        flex-direction: column;
+    }
+    #b-kiwi-mint{
+        flex-direction: row;
+    }
+    .kiwi-mint-left h1 {
+        font-size: 70px;
+    }
+    .kiwi-mint-left {
+        padding: 50px;
+    }
+    .kiwi-mint-right {
+        height: 600px;
+    }
+    .kiwi-mint-right img{
+        width: 50%;
+    }
+    /**/
+    .nav-sections{
+        width: 275px;
+        gap:25px;
+        margin:0 auto;
+    }
+    /**/
+    #b-aromatherapy{
+        margin: 100px 0;
+    }
+    #b-aromatherapy img{
+        width: 50%;
+    }
+    .b-aromatherapy-right{
+        padding: 0 25px 0 0;
+    }
+    .b-aromatherapy-right p {
+        width: 100%;
+    }
+    .b-aromatherapy-right h2 {
+        font-size: 40px;
+    }
+    /**/
+    .best-sellers-button, .trends-button {
+        width: 100%;
+    }
+    .product-list {
+        flex-direction: column;
+    }
+    /**/
+    .b-our-luxury-left {
+        padding: 50px;
+    }
+    .b-our-luxury-left h3 {
+        font-size: 38px;
+    }
+}
