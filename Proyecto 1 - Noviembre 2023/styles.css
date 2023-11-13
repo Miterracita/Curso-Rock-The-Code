@@ -16,6 +16,7 @@
     padding: 0px;
     box-sizing: border-box;
     font-family: 'Varela Round', sans-serif;
+    scroll-behavior: smooth;
 }
 
 a {
@@ -92,6 +93,9 @@ nav li:hover a{
 nav li:last-child {
     margin-right: 0px;
 }
+#nav-mobil{
+    display: none;
+}
 
 /*SECCIONES*/
 #b-kiwi-mint,
@@ -111,6 +115,8 @@ nav li:last-child {
     position: absolute;
     right: 0;
     top:70px;
+    width: auto;
+    height: auto;
 }
 .index-50 {
     z-index: 50;
@@ -330,8 +336,8 @@ footer {
         height: 400px;
     }
     .kiwi-mint-right img{
-        width: 100%;
         top:10px;
+        width: 100%;
     }
     .kiwi-mint-left {
         padding: 100px 25px;
@@ -355,6 +361,17 @@ footer {
         align-items: center;
         gap: 20px;
         height: 150px;
+    }
+    #nav-desktop {
+        display:none;
+    }
+    #nav-mobil {
+        display:flex;
+        flex-direction: row;
+        padding: 20px;
+        justify-content: space-between;
+        height: auto;
+        cursor: pointer;
     }
 
     /**/
@@ -382,7 +399,7 @@ footer {
         width: 100%;
     }
     .best-sellers-products, .trends-products{
-        padding: 20px;
+        padding: 5px;
     }
     .product-list {
         flex-direction: column;
