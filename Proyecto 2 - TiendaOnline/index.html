@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Ana Rodríguez" />
+    <title>Proyecto 2 - Tienda Online</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <img src="img/logo.png" alt="logo tienda" width="130px"/>
+        <h1>Plantas de interior e exterior</h1>
+        <h2>Consula nuestras ofertas semanales</h2>
+    </header>
+    <main>
+        <aside id="filter">
+            <div class="cont-flex-row line">
+                <img src="img/ico-filtros.png" alt="icono filtros" id="ico-filtros" width="35px" height="35px" class="icon-filtros"/>
+                <h5>Aplicar Filtros</h5>
+            </div>
+
+            <p class="filter-title">Vendedores</p>
+            <select name="seller" id="seller">
+                <option value="todos">Todos</option>
+            </select>
+
+            <p class="filter-title">Precio</p>
+            <div class="cont-flex-row">
+                <input type="number" id="precio-max" name="precio" min="2" max="10" />
+                <input type="button" id="btn-precio" name="btn-buscar" value="Buscar" class="boton" />
+            </div>
+            <p class="filter-note line">* Precio máximo</p>
+            
+            <div class="cont-flex-column">
+                <img src="img/hoja-trans.png" alt="icono planta" id="ico-planta" width="200px"/>
+                <input type="button" id="btn-limpiar-filtro" name="btn-limpiar-filtro" value="Limpiar filtros" class="boton btn-secundary"/>
+            </div>
+        </aside>
+        <section class="products" id="products">
+            <h3>Nuestras plantas</h3>
+        </section>
+    </main>
+    <footer>
+        <img src="img/logo.png" alt="logo tienda" width="80px"/>
+        <p class="footer-txt"><b>© Plantify Garden </b>- todos los derechos reservados</p>
+    </footer>
+    <script src="index.js"></script>
+</body>
+</html>

@@ -1,0 +1,314 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Serif:ital@0;1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,900;1,400&display=swap');
+
+:root {
+    --primary-color: #004F44;
+    --primary-light: #F3FFFC;
+    --secundary-color: #9C6955;
+    --secundary-light: #F3A195;
+    --txt-color-white: #fff;
+    --txt-color-black: #000;
+    --border-color-grey: #EFF7F5;
+}
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+h1,
+h2 {
+    color: var(--txt-color-white);
+    font-weight: 400;
+    text-align: center;
+    font-family: 'PT Serif', serif;
+}
+
+h2 {
+    font-style: italic;
+}
+
+h3 {
+    font-family: 'PT Serif', serif;
+    color: var(--secundary-color);
+    font-size: 30px;
+}
+h4 {
+    color: var(--primary-color);
+    font-family: 'PT Serif', serif;
+    font-size: 25px;
+    margin: 40px 0;
+    text-align: center;
+
+}
+
+h5 {
+    margin-bottom: 20px;
+}
+
+header {
+    background-color: var(--primary-color);
+    height: 300px;
+    padding: 50px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+/*MAIN CONTENT*/
+main {
+    min-height: 80vh;
+    display: flex;
+    flex-direction: row;
+}
+
+    aside {
+        width: 20vw;
+        padding: 50px;
+        background-color: var(--border-color-grey);
+    }
+
+    .filter-title{
+        color: var(--secundary-color);
+        margin-bottom: 20px;
+        font-family: 'PT Serif', serif;
+        font-size: 18px;
+        font-weight: 600;
+    }
+    
+    .filter-note{
+        margin-top: 10px;
+        margin-bottom: 30px;
+        font-size: 12px;
+        padding-bottom: 30px;
+    }
+
+    .icon-filtros{
+        margin-right: 15px;
+        margin-bottom: 30px;
+    }
+
+    select {
+        margin-bottom: 30px;
+        border: 1px solid #eee;
+        padding: 10px;
+        width: 100%;
+    }
+
+    input {
+        border: 1px solid #eee;
+        padding: 10px;
+        width: 100%;
+        margin-right: 20px;
+    }
+
+    .cont-flex-row{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+    .cont-flex-column{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .products {
+        width: 80vw;
+        padding: 50px;
+    }
+
+    /*PRODUCTS CARD*/
+
+    ul {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        gap: 20px;
+        flex-wrap: wrap;
+        margin-top: 50px;
+    }
+    li {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        border: 1px solid var(--border-color-grey);
+        border-radius: 10px 10px 0 0;
+        padding: 20px;
+        margin: 20px;
+        list-style: none;
+        max-width: 400px;
+        box-shadow: 0 4px 8px 0 rgb(0 0 0 / 7%), 0 6px 20px 0 rgb(0 0 0 / 7%);
+        cursor: pointer;
+    }
+    
+    /*hover product*/  
+    li:hover {
+        border: 1px solid var(--secundary-color);
+    }
+    li:hover h4{
+        color: var(--secundary-color);
+    }
+    li:hover img{
+        filter: grayscale(50%) sepia(50%);
+    }
+    .cont-img {
+        max-height: 400px;
+        overflow: hidden;
+    }
+    .cont-img img{
+        object-fit: cover;
+        width:100%;
+        height:100%;
+    }
+    .products-descripcion{
+        font-size: 15px;
+        color: #888;
+        margin: 30px 0 10px 0;
+        text-align: justify;
+        line-height: 1.5;
+    }
+    .products-medidas{
+        margin: 10px 0;
+        font-size: 14px;
+        color: var(--secundary-color);
+    }
+    .cont-precio{
+        display: flex;
+        flex-direction: row;
+        gap: 30px;
+        justify-content: space-between;
+        align-items: flex-end;
+    }
+    .products-precio{
+        width: 50%;
+        font-size: 20px;
+        color: var(--primary-color);
+        font-weight: 600;
+    }
+    .products-medidas{
+        font-weight: 600;
+        margin-bottom: 30px;
+    }
+    /**/
+
+    .boton {
+        padding: 15px;
+        background-color: var(--primary-color);
+        text-align: center;
+        font-weight: 300;
+        color: var(--txt-color-white);
+        border: none;
+        margin-right: 0px;
+        cursor: pointer;
+        width: 50%;
+    }
+
+    .boton:hover{
+        background-color: var(--secundary-color);
+    }
+
+    .btn-secundary {
+        background-color: var(--secundary-color);
+    }
+
+    .boton.btn-secundary:hover{
+        background-color: var(--primary-color);
+    }
+
+
+    .line{
+        border-bottom: 1px solid var(--primary-color);
+        margin-bottom: 30px;
+    }
+
+    /*FOOTER*/
+    footer {
+        background-color: var(--secundary-color);
+        height: 100px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+    }
+    .footer-txt {
+        color: var(--txt-color-white);
+    }
+
+/* MÓVIL */
+@media (max-width:768px) {
+
+    header {
+        padding: 25px;
+        height: 250px;
+    }
+
+    /*MAIN CONTENT*/
+    main {
+        min-height: 100vh;
+        flex-direction: column;
+    }
+
+    aside {
+        width: 100vw;
+        padding: 20px;
+    }
+
+    .products {
+        width: 100vw;
+        padding: 10px;
+    }
+
+/*PRODUCTS CARD*/
+
+    ul {
+        flex-direction: column;
+        justify-content: center;
+        gap: 0px;
+    }
+    li {
+        flex-direction: column;
+    }
+
+    h3 {
+        margin: 20px;
+        text-align: center;
+    }
+
+    h2 {
+        display: none;
+    }
+
+    .boton {
+        padding: 15px;
+        background-color: var(--primary-color);
+        text-align: center;
+        font-weight: 300;
+        color: var(--txt-color-white);
+        border: none;
+        margin-right: 0px;
+        cursor: pointer;
+        width: 50%;
+    }
+    #ico-planta,
+    #ico-filtros {
+        display: none;
+    }
+
+    .line{
+        margin-bottom: 10px;
+        border: none;
+    }
+
+    .filter-title,
+    select {
+        margin-bottom: 10px;
+    }
+    /*FOOTER*/
+    footer {
+        padding: 10px;
+    }
+
+}
