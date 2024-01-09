@@ -48,6 +48,12 @@ h5 {
     margin-bottom: 20px;
 }
 
+.subtitle{
+    color: var(--primary-color);
+    font-size: 20px;
+    margin: 30px 0;
+}
+
 header {
     background-color: var(--primary-color);
     height: 300px;

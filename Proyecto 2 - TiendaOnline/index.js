@@ -245,20 +245,62 @@
         }
       }
 
-      //aplicar filtro precio     
-      let priceButton = document.getElementById('btn-precio');
+      //aplicar filtro precio, BOTÓN BUSCAR
+      let searchButton = document.getElementById('btn-precio');
+      let priceFilter = document.getElementById('precio-max');
+     
 
-      priceButton.addEventListener('click', function() {
+        searchButton.addEventListener('click', function() {
 
-        let priceFilter = document.getElementById('precio-max');
-        let priceFilterValue = priceFilter.value;
+          let priceFilterValue = priceFilter.value;
+    
+          // Calcular el valor mínimo del filtro de precio
+          function calcularValorMinimoPrecio(products) {
+            let valorMinimo = Number.MAX_SAFE_INTEGER;
 
-        priceFilterValue > 0 ? PrintPriceProducts(products, priceFilterValue) : alert("no has indicado ningún precio");
-      });
+            for (let i = 0; i < products.length; i++) {
+              if (products[i].price < valorMinimo) {
+                valorMinimo = products[i].price;
+              }
+            }
+
+            return valorMinimo;
+          }
+
+          // Uso de la función
+          let valorMinimoPrecio = calcularValorMinimoPrecio(products);
+
+          // Ahora puedes establecer el valor mínimo en el filtro de precio
+          priceFilter.min = valorMinimoPrecio;
+
+
+          //Creamos mensaje de error
+          let mensaje = document.createElement('p');
+          mensaje.classList.add("subtitle");
+          let textP = document.createTextNode('No se han encontrado resultados');
+          mensaje.appendChild(textP);
+    
+          let contMensaje = document.getElementById('contMensaje');
+
+            // Limpiar mensajes anteriores
+            //contMensaje.innerHTML = '';
+
+          if(priceFilterValue <= valorMinimoPrecio){
+            
+            contMensaje.appendChild(mensaje);
+            ulToDelete.innerHTML = '';
+
+          } else {
+            PrintPriceProducts(products, priceFilterValue);
+          }
+
+        });
+
+      const ulToDelete = document.getElementById('ulSellers');
       
       function PrintPriceProducts (products, priceFilterValue) {
 
-        const ulToDelete = document.getElementById('ulSellers');
+        
         //eliminar todo lo pintado anteriormente
         ulToDelete.innerHTML = '';
 
@@ -322,12 +364,17 @@
       }
 
       
-      //limpiar filtros
+      //LIMPIAR FILTROS
       let limpiarFiltros = document.getElementById('btn-limpiar-filtro');
 
       limpiarFiltros.addEventListener('click', function() {
 
         PrintAllProducts (products);
+        selectElement.value = "todos";
+        priceFilter.value = "0";
+        //contMensaje.removeChild(mensaje);
+        contMensaje.innerHTML = '';
+
       });
 
       function PrintAllProducts (products){
