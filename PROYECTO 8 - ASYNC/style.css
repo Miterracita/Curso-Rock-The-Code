@@ -1,0 +1,19 @@
+:root {
+  --primary-color:#780000;
+  --secondary-color:#fdf0d5;
+  --txt-title-color:#c1121f;
+}
+
+* {
+  margin:0;
+  padding:0;
+  box-sizing: border-box;
+}
+
+body{
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-size: 14px;
+}
+main{
+  min-height: 80vh;
+}
