@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;500;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Loved+by+the+King&family=Updock&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Protest+Revolution&display=swap');
+
+
+:root {
+    --primary-color: #2d4f00;
+    --primary-light: #F3FFFC;
+    --secundary-color: #1f1f1f;
+    --secundary-light: #e1e1e1;
+    --secundary-medium: #adadad;
+    --grey: #f7f7f7;
+    --white: #ffffff;
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    /* font-family: 'Loved by the King', cursive;
+    font-family: 'Updock', cursive; */
+    font-weight: 400;
+}
+
+/* MÓVIL */
+@media (max-width:768px) {}
+ 

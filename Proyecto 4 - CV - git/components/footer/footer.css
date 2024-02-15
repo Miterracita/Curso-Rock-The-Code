@@ -1,0 +1,9 @@
+@import "../../styles.css";
+
+footer {
+    background-color: var(--secundary-color);
+    color: var(--white);
+    padding:10px;
+    text-align: center;
+    font-size: 12px;
+}

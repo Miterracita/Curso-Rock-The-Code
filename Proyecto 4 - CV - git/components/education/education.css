@@ -1,0 +1,26 @@
+@import "../../styles.css";
+
+#education {
+    margin: 0 150px 100px 150px;
+}
+
+.flex-education {
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+.education {
+ border-radius: 10px;
+ background-color: var(--primary-color);
+ color: var(--white);
+ padding: 20px;
+ width: 48%;
+}
+
+.degree {
+    font-weight: 400;
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+.university {}
+.graduationYear {}

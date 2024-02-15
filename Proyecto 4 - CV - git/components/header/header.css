@@ -1,0 +1,53 @@
+@import "../../styles.css";
+
+header{
+    padding: 50px 150px;
+    border-bottom: 3px solid var(--primary-color);
+    height: 100vh;
+}
+h1{
+    font-weight: 600;
+    margin: 25px 0 50px 0;
+    font-size: 60px;
+    font-family: "Protest Revolution", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+h5{
+    font-weight: 500;
+    font-size: 20px;
+    color: var(--secundary-color)
+}
+p {
+    font-weight: 300;
+    line-height: 25px;
+}
+span{
+    color: var(--primary-color);
+}
+button {
+    background-color: var(--secundary-color);
+    color: var(--white);
+    padding: 10px 20px;
+    border: none;
+    margin-top: 30px;
+    cursor: pointer;
+}
+button:hover {
+    background-color: var(--primary-color);
+}
+.flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.f-right,
+.f-left{
+    width: 50%;
+}
+.f-right{
+    text-align: right;
+}
+.cont-avatar img{
+    /* max-height: 300px; */
+}
