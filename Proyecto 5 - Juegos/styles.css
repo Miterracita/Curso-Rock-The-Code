@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css2?family=Luckiest+Guy&family=Space+Grotesk:wght@300..700&family=Titan+One&display=swap');
+
+
+:root {
+    --background-one:#0f4c5c;
+    --background-two:#FFF455;
+    --background-three:#FFC700;
+    --background-four:#4CCD99;
+    --background-five:#007F73;
+}
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: "Luckiest Guy", cursive;
+    font-weight: 400;
+    font-style: normal;
+}
+
+body {
+    background-color: var(--background-five);
+}
+
+.box-presentacion {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: 100vh;
+    min-width: 100vw;
+    height: 100%;
+    width: 100%;
+}
+
+h1 {
+    font-size: 3em;
+    text-align: center;
+    color: white;
+    margin: 50px;
+    font-size: 7em;
+}
+
+h2 {
+    color: var(--background-one);
+}
+
+.box-juegos {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    text-align: center;
+    color: white;
+
+    font-family: monospace;
+    font-size: 1em;
+    font-weight: 400;
+    font-style: normal;
+}
+.tres-en-raya {
+    border-radius: 10px;
+    padding: 50px;
+    cursor: pointer;
+    background-color: var(--background-two);
+    min-width: 350px;
+}
+.tres-en-raya:hover {
+    background-color: var(--background-one);
+}
+.tres-en-raya:hover h2 {
+    color: white;
+}
+.memory {
+    border-radius: 10px;
+    padding: 50px;
+    cursor: pointer;
+    background-color: var(--background-three);
+    min-width: 350px;
+    transition: all 10ms ease;
+}
+.memory:hover {
+    background-color: var(--background-one);
+}
+.memory:hover h2{
+    color: white;
+}
+.ppt {
+    border-radius: 10px;
+    padding: 50px;
+    cursor: pointer;
+    background-color: var(--background-four);
+    min-width: 350px;
+}
+.ppt:hover {
+    background-color: var(--background-one);
+}
+.ppt:hover h2{
+    color: white;
+}
+
+@media (max-width:768px){
+    
+    .box-juegos {
+        flex-direction: column;
+        padding: 50px;
+    }
+}
