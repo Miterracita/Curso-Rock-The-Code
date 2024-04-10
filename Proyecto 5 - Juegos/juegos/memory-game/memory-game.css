@@ -153,6 +153,28 @@ h2 {
     display: block;
     transition: display 3s ease-in;
 }
+.butons {
+    display: flex;
+    justify-content: center;
+}
+#btn-inicio {
+    margin: 15px 0;
+    border: none;
+    padding: 10px;
+    color: black;
+    font-weight: 800;
+    background-color: white;
+    cursor: pointer;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#btn-inicio img{
+    width: 25px;
+    height: 25px;
+    margin-right: 10px;
+}
 
 @media (min-width: 768px) and (max-width: 1024px) {
     .box-puntos{

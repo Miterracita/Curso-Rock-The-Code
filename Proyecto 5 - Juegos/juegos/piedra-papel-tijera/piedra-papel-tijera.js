@@ -42,6 +42,12 @@ let boxResutadoJuego = document.querySelector('#resultado-juego');
 let btnSeguirJugando = document.querySelector('#seguir');
 let btnResetearPartida = document.querySelector('#reset');
 
+let btnVolver = document.querySelector('.btn-inicio');
+
+btnVolver.addEventListener('click', function() {
+    window.location.href = '../../index.html';
+});
+
 //al pulsar sobre el botón iniciar partida de la pantalla inicial
 iniciarPartida.addEventListener('click', function(event) {
     //esta línea evita que se recargue la página 

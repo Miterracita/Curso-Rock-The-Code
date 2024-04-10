@@ -34,7 +34,6 @@ body {
 }
 
 h1 {
-    font-size: 3em;
     text-align: center;
     color: white;
     margin: 50px;
@@ -99,7 +98,9 @@ h2 {
 }
 
 @media (max-width:768px){
-    
+    h1 {
+        font-size: 4em;
+    }
     .box-juegos {
         flex-direction: column;
         padding: 50px;

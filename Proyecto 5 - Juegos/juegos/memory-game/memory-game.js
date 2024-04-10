@@ -8,6 +8,12 @@ let boxPlay = document.querySelector('.box-play');
 let boxPuntos = document.querySelector('.box-puntos');
 let tablero = document.querySelector('.tablero-memory-game');
 
+let btnVolver = document.querySelector('.btn-inicio');
+
+btnVolver.addEventListener('click', function() {
+    window.location.href = '../../index.html';
+});
+
 //tarjetas juego
 let tarjeta1 = document.querySelector('.card-1');
 let tarjeta2 = document.querySelector('.card-2');
@@ -119,8 +125,6 @@ const ocultarTarjetas = (tarjeta)=> {
 
 const sumarPuntos = (puntos) => {
     puntos++;
-    console.log(puntos);
-    //crear un div donde pinte el marcador de puntos y se actualice cada vez que se sumen puntos
 };
 
 // Agregamos el evento de clic a cada tarjeta
@@ -182,10 +186,8 @@ const juegoTarjetas = (tarjeta) => {
         //cuando el número de tarjetas visibles sea inferior a 2 lanzamos mostrarTarjeta().
         mostrarTarjeta(tarjeta);
         tarjetasVisibles++;
-        console.log(tarjetasVisibles); 
 
-    } else { //cuando el número de tarjetas visibles es dos
-    
+    } else { //cuando el número de tarjetas visibles es dos   
         comprobarParejas();
     }
 

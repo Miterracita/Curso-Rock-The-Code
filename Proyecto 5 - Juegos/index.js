@@ -1,8 +1,3 @@
-// import { btnMenu } from './components/btn-menu/btnMenu';
-
-// const menu = document.querySelector('#menu');
-// menu.innerHTML = ` ${btnMenu("Menú de inicio")}`;
-
 let tresEnRaya = document.querySelector('.tres-en-raya');
 let memory = document.querySelector('.memory');
 let ppt = document.querySelector('.ppt');

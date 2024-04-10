@@ -7,6 +7,7 @@ let turnoTitle = document.querySelector('#turno');
 let tresEnRaya = document.querySelector('.tres-en-raya');
 
 let btnReiniciar = document.querySelector('#btn-reiniciar');
+let btnVolver = document.querySelector('.btn-inicio');
 
 //casillas tablero
 let item1 = document.querySelector('.item-1');
@@ -46,6 +47,7 @@ const seleccionTurno = () => {
     turnoTitle.classList.remove('invisible');
     tresEnRaya.classList.remove('invisible');
     btnReiniciar.classList.remove('invisible');
+    btnVolver.classList.remove('invisible');
 
     if (turno === "naranja"){
         tNaranja.classList.add('turno');
@@ -227,4 +229,8 @@ btnReiniciar.addEventListener('click', function() {
     item7.innerHTML = "";
     item8.innerHTML = "";
     item9.innerHTML = "";
+});
+
+btnVolver.addEventListener('click', function() {
+    window.location.href = '../../index.html';
 });
