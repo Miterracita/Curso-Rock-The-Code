@@ -106,7 +106,7 @@ h2 {
     min-height: 0;
 }
 .card {
-    padding: 20px;
+    padding: 0px;
     background-color: var(--background-color-yellow);
     border: 2px solid var(--background-color-yellow);
     display: flex;
@@ -115,7 +115,7 @@ h2 {
 }
 
 .ico {
-    padding: 30px;
+    padding: 12px;
     display: flex;
     justify-content: center;
     align-items: center;
