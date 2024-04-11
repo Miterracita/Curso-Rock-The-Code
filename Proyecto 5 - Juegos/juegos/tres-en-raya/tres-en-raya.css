@@ -1,11 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
 
-/*
-naranja: FF5733
-verde: #DAF7A6 
-amarillo:#FFC300
-*/
-
 :root {
     --background-color: #581845;
     --rojo-hover:#900C3F;
@@ -56,6 +50,7 @@ h2 {
     display: flex;
     padding: 30px;
     flex-direction: column;
+    background-color: rgba(255, 255, 255, 0.5);
 }
 .jugador-naranja,
 .jugador-verde {
@@ -136,9 +131,10 @@ h2 {
 #btn-reiniciar {
     margin: 30px 0;
     border: none;
+    border-radius: 10px;
     padding: 15px;
-    color: black;
-    background-color: #DAF7A6;
+    color: white;
+    background-color: var(--rojo);
     cursor: pointer;
 }
 
