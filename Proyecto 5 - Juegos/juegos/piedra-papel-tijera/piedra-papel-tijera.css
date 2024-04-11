@@ -255,9 +255,9 @@ input {
     h3 {
         font-size: 1.5em;
     }
-    .seleccion-juego {
+    /* .seleccion-juego {
         flex-direction: column;
-    }
+    } */
     .box-inicio {
         padding: 30px;
     }
