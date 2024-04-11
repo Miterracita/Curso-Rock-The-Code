@@ -255,21 +255,15 @@ input {
     h3 {
         font-size: 1.5em;
     }
-    /* .seleccion-juego {
-        flex-direction: column;
-    } */
     .box-inicio {
         padding: 30px;
     }
     .piedra:hover img,
     .papel:hover img,
     .tijera:hover img {
-        width: 100px;
-        height: 100px;
+        width: 75px;
+        height: 75px;
     }
-    /* .box-jugadas {
-        flex-direction: column;
-    } */
     .box-marcador {
         flex-direction: column;
     }
