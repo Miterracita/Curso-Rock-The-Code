@@ -94,21 +94,14 @@ h2 {
 }
 
 .tablero-memory-game{
-    padding: 50px;
     display: grid;
-    grid-template-columns: repeat(6, 1fr);
-    grid-template-rows: repeat(3, 1fr);
     gap: 10px 10px;
-
-    min-width: 80vw;
-    min-height: 400px;
-
     justify-content: center;
     background-color: var(---background-color-orange);
     
     padding: 20px;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(8, 1fr);
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(auto, 1fr);
     min-width: 0;
     min-height: 0;
 }
