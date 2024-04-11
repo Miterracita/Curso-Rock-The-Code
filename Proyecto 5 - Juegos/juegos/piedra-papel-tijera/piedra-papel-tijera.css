@@ -103,7 +103,7 @@ input {
     background-color: var(--primary-color);
     border-radius: 5px;
 }
-.box-inicio ,
+.box-inicio,
 .box-partida {
     min-width: 50%;
 }
@@ -258,9 +258,18 @@ input {
     .seleccion-juego {
         flex-direction: column;
     }
-    .box-jugadas {
-        flex-direction: column;
+    .box-inicio {
+        padding: 30px;
     }
+    .piedra:hover img,
+    .papel:hover img,
+    .tijera:hover img {
+        width: 100px;
+        height: 100px;
+    }
+    /* .box-jugadas {
+        flex-direction: column;
+    } */
     .box-marcador {
         flex-direction: column;
     }
