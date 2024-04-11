@@ -134,14 +134,15 @@ h2 {
     border: none;
     border-radius: 10px;
     padding: 15px;
-    color: white;
-    background-color: var(--rojo);
+    color: black;
+    background-color: #FFC300;
     cursor: pointer;
+    text-align: right;
 }
 
 #btn-reiniciar:hover {
     background-color: #FFC300;
-    color: white;
+    color: black;
 }
 
 .btn-inicio {
