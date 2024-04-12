@@ -8,6 +8,7 @@ let tresEnRaya = document.querySelector('.tres-en-raya');
 
 let btnReiniciar = document.querySelector('#btn-reiniciar');
 let btnVolver = document.querySelector('#btn-inicio');
+let boxBotones = document.querySelector('.botones');
 
 //casillas tablero
 let item1 = document.querySelector('.item-1');
@@ -46,8 +47,7 @@ const seleccionTurno = () => {
     partidaTitle.classList.add('invisible');
     turnoTitle.classList.remove('invisible');
     tresEnRaya.classList.remove('invisible');
-    btnReiniciar.classList.remove('invisible');
-    btnVolver.classList.remove('invisible');
+    boxBotones.classList.remove('invisible');
 
     if (turno === "naranja"){
         tNaranja.classList.add('turno');
@@ -184,7 +184,7 @@ const comprobarJuego = () => {
         if (ficha1 && ficha2 && ficha3 && ficha1.classList.contains(ficha2.classList[0]) && ficha1.classList.contains(ficha3.classList[0])) {
             const ganador = ficha1.classList.contains('circulo') ? 'Naranja' : 'Verde';
             alert(`¡Enhorabuena jugador ${ganador}! Has ganado la partida.`);
-            return;
+            return ganador;
         }
     }
     

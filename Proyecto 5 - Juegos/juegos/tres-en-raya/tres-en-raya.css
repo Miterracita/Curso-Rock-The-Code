@@ -79,8 +79,8 @@ h2 {
     grid-template-rows: repeat(3, 1fr);
     gap: 10px 10px;
 
-    min-width: 400px;
-    min-height: 400px;
+    min-width: 370px;
+    min-height: 370px;
 
     justify-content: center;
     background-color: var(--background-color);
@@ -121,14 +121,6 @@ h2 {
     background-color: #DAF7A6;
 }
 
-.invisible {
-    display: none;
-}
-.visible {
-    display: block;
-    transition: display 3s ease-in;
-}
-
 .botones {
     display: flex;
     justify-content: space-between;
@@ -164,6 +156,14 @@ h2 {
     width: 25px;
     height: 25px;
     margin-right: 10px;
+}
+
+.invisible {
+    display: none;
+}
+.visible {
+    display: block;
+    transition: display 3s ease-in;
 }
 
 @media (max-width: 768px){
