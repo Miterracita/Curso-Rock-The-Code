@@ -2,11 +2,12 @@
 
 
 :root {
-    --background-one:#0f4c5c;
-    --background-two:#FFF455;
-    --background-three:#FFC700;
-    --background-four:#4CCD99;
+    --background-one:#898121;
+    --background-two: #581845;
+    --background-three:#e76f51;
+    --background-four:#ff0095;
     --background-five:#007F73;
+    --background-hover: #000;
 }
 
 *{
@@ -19,7 +20,7 @@
 }
 
 body {
-    background-color: var(--background-five);
+    background-color: var(--background-one);
 }
 
 .box-presentacion {
@@ -41,7 +42,7 @@ h1 {
 }
 
 h2 {
-    color: var(--background-one);
+    color: white;
 }
 
 .box-juegos {
@@ -64,7 +65,7 @@ h2 {
     min-width: 350px;
 }
 .tres-en-raya:hover {
-    background-color: var(--background-one);
+    background-color: var(--background-hover);
 }
 .tres-en-raya:hover h2 {
     color: white;
@@ -78,7 +79,7 @@ h2 {
     transition: all 10ms ease;
 }
 .memory:hover {
-    background-color: var(--background-one);
+    background-color: var(--background-hover);
 }
 .memory:hover h2{
     color: white;
@@ -91,7 +92,7 @@ h2 {
     min-width: 350px;
 }
 .ppt:hover {
-    background-color: var(--background-one);
+    background-color: var(--background-hover);
 }
 .ppt:hover h2{
     color: white;
@@ -99,10 +100,19 @@ h2 {
 
 @media (max-width:768px){
     h1 {
-        font-size: 4em;
+        font-size: 3em;
+        margin:0px;
+        margin-bottom: 50px;
     }
     .box-juegos {
         flex-direction: column;
-        padding: 50px;
+        padding: 0px;
+        align-items: center;
+        gap: 25px;
+    }
+    .tres-en-raya,
+    .memory,
+    .ppt {
+        width: 250px;
     }
 }
