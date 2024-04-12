@@ -48,12 +48,19 @@ h2 {
     font-weight: 600;
 }
 
+.butons {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0 40px;
+}
 .btn-restart {
     padding: 10px 20px;
-    margin: 20px;
+    margin: 15px 0;
     text-align: center;
     background-color: var(--background-color-green);
     border: none;
+    border-radius: 10px;
     font-size: 15px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     cursor: pointer;
@@ -146,10 +153,7 @@ h2 {
     display: block;
     transition: display 3s ease-in;
 }
-.butons {
-    display: flex;
-    justify-content: center;
-}
+
 #btn-inicio {
     margin: 15px 0;
     border: none;
@@ -189,6 +193,10 @@ h2 {
         padding: 20px;
         font-size: 5em;
     }
+    .butons {
+        width: 50%;
+        padding: 0;
+    }
 }
 
 @media (min-width: 1025px) {
@@ -203,5 +211,9 @@ h2 {
     .ico {
         padding: 20px;
         font-size: 5em;
+    }
+    .butons {
+        width: 50%;
+        padding: 0;
     }
 }

@@ -2,6 +2,7 @@ let puntos = 0;
 let tarjetasVisibles = 0;
 let parejas = false;
 
+let boxBtn = document.querySelector('.butons');
 let btnPlay = document.querySelector('.btn-play');
 let btnRestart = document.querySelector('.btn-restart');
 let boxPlay = document.querySelector('.box-play');
@@ -60,6 +61,7 @@ btnPlay.addEventListener('click', function() {
     boxPlay.classList.add("oculto");
     boxPuntos.classList.remove("oculto");
     tablero.classList.remove("oculto");
+    boxBtn.classList.remove("oculto");
     pintarTarjetas(iconos, tarjetas);
 });
 

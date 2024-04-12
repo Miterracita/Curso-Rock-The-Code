@@ -68,19 +68,19 @@ iniciarPartida.addEventListener('click', function(event) {
 // Seleccionar juego player
 
 piedra.addEventListener('click', function() {
-    jugadaPlayer = "piedra";
+    jugadaPlayer = "Piedra";
     juegoAleatorio();
     jugadaMachine = juegoAleatorio();
     lanzarJuego();
 });
 papel.addEventListener('click', function() {
-    jugadaPlayer = "papel";
+    jugadaPlayer = "Papel";
     juegoAleatorio();
     jugadaMachine = juegoAleatorio();
     lanzarJuego();
 });
 tijera.addEventListener('click', function() {
-    jugadaPlayer = "tijera";
+    jugadaPlayer = "Tijera";
     juegoAleatorio();
     jugadaMachine = juegoAleatorio();
     lanzarJuego();
@@ -88,7 +88,7 @@ tijera.addEventListener('click', function() {
 
 // juego aleatorio para jugada maquina
 const juegoAleatorio = () => {
-    const cartas = ['piedra', 'papel', 'tijera'];
+    const cartas = ['Piedra', 'Papel', 'Tijera'];
     const valorAleatorio  = cartas[Math.floor(Math.random() * cartas.length)];
     return valorAleatorio;
 }
@@ -98,38 +98,39 @@ const juegoAleatorio = () => {
 const lanzarJuego = () => {
 
     if(
-        (jugadaPlayer === "piedra" && jugadaMachine === 'tijera') ||
-        (jugadaPlayer === "papel" && jugadaMachine === 'piedra') ||
-        (jugadaPlayer === "tijera" && jugadaMachine === 'papel') 
+        (jugadaPlayer === "Piedra" && jugadaMachine === 'Tijera') ||
+        (jugadaPlayer === "Papel" && jugadaMachine === 'Piedra') ||
+        (jugadaPlayer === "Tijera" && jugadaMachine === 'Papel') 
     ){
         boxMensajeGanador.innerHTML = `
-            <p>${jugadaMachine} y ${jugadaPlayer}</p>
-            <h5>Enhorabuena has ganado este juego</h5>
+            <p>${jugadaPlayer} y ${jugadaMachine}</p>
+            <h5>¡¡¡ Enhorabuena has ganado este juego !!!</h5>
         `;
         puntosPlayer++
         puntosPlayerBox.innerText = puntosPlayer;
         actualizarPuntos();
     }
     if(
-        (jugadaPlayer === "piedra" && jugadaMachine === 'papel') ||
-        (jugadaPlayer === "papel" && jugadaMachine === 'tijera') ||
-        (jugadaPlayer === "tijera" && jugadaMachine === 'piedra') 
+        (jugadaPlayer === "Piedra" && jugadaMachine === 'Papel') ||
+        (jugadaPlayer === "Papel" && jugadaMachine === 'Tijera') ||
+        (jugadaPlayer === "Tijera" && jugadaMachine === 'Piedra') 
     ){
         boxMensajeGanador.innerHTML = `
-            <p>${jugadaMachine} y ${jugadaPlayer}</p>
-            <h5>Este juego lo ha ganado Pepita</h5>
+            <p>${jugadaPlayer} y ${jugadaMachine}</p>
+            <h5><< Este juego lo ha ganado Pepita >></h5>
         `;
         puntosMachine++
         puntosMachineBox.innerHTML = puntosMachine;
         actualizarPuntos();
     } if(
-        (jugadaPlayer === "piedra" && jugadaMachine === 'piedra') ||
-        (jugadaPlayer === "papel" && jugadaMachine === 'papel') ||
-        (jugadaPlayer === "tijera" && jugadaMachine === 'tijera') 
+        (jugadaPlayer === "Piedra" && jugadaMachine === 'Piedra') ||
+        (jugadaPlayer === "Papel" && jugadaMachine === 'Papel') ||
+        (jugadaPlayer === "Tijera" && jugadaMachine === 'Tijera') 
     ) {
         boxMensajeGanador.innerHTML = `
-            <p>${jugadaMachine} y ${jugadaPlayer}</p>
-            <h5>Vaya, en este juego habeis quedado en empate, esta vez nadie suma puntos</h5>
+            <p>${jugadaPlayer} y ${jugadaMachine}</p>
+            <h5>Vaya, en este juego habéis quedado en empate.</h5>
+            <h5>-- En este juego nadie suma puntos --</h5>
         `;
     }
 
@@ -149,21 +150,21 @@ const pintarJuego = () => {
 
     //pintar juego player
 
-    if (jugadaPlayer === "piedra") {
+    if (jugadaPlayer === "Piedra") {
         boxPlayer.innerHTML = `<div class="box-piedra"><img src="img/piedra.jpg" alt="imagen-piedra"/></div>`;
-    } else if (jugadaPlayer === "papel"){
+    } else if (jugadaPlayer === "Papel"){
         boxPlayer.innerHTML = `<div class="box-papel"><img src="img/papel.jpg" alt="imagen-papel"/></div>`;
-    } else if (jugadaPlayer === "tijera"){
+    } else if (jugadaPlayer === "Tijera"){
         boxPlayer.innerHTML = `<div class="box-tijera"><img src="img/tijera.jpg" alt="imagen-tijera"/></div>`;
     } 
 
     //pintar juego machine
     
-    if (jugadaMachine === "piedra") {
+    if (jugadaMachine === "Piedra") {
         boxMachine.innerHTML = `<div class="box-piedra"><img src="img/piedra.jpg" alt="imagen-piedra"/></div>`;
-    } else if (jugadaMachine === "papel"){
+    } else if (jugadaMachine === "Papel"){
         boxMachine.innerHTML = `<div class="box-papel"><img src="img/papel.jpg" alt="imagen-papel"/></div>`;
-    } else if (jugadaMachine === "tijera"){
+    } else if (jugadaMachine === "Tijera"){
         boxMachine.innerHTML = `<div class="box-tijera"><img src="img/tijera.jpg" alt="imagen-tijera"/></div>`;
     }
 }

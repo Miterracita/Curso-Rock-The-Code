@@ -7,7 +7,7 @@ let turnoTitle = document.querySelector('#turno');
 let tresEnRaya = document.querySelector('.tres-en-raya');
 
 let btnReiniciar = document.querySelector('#btn-reiniciar');
-let btnVolver = document.querySelector('.btn-inicio');
+let btnVolver = document.querySelector('#btn-inicio');
 
 //casillas tablero
 let item1 = document.querySelector('.item-1');
