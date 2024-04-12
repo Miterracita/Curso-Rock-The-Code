@@ -1,4 +1,5 @@
 let turno = "";
+let juegoTerminado = false;
 let tNaranja = document.querySelector('.jugador-naranja');
 let tVerde = document.querySelector('.jugador-verde');
 
@@ -67,6 +68,10 @@ const cambiarTurno = () => {
 // Al pulsar sobre las casillas del tablero
 
 item1.addEventListener('click', function() {
+    if(juegoTerminado){
+        alert ('La partida ha terminado. Por favor, reinicia el juego.');
+        return;
+    }
     if(item1.children.length > 0){
         alert('Esta casilla ya está ocupada');
     } else if (tirada < 9){
@@ -78,6 +83,10 @@ item1.addEventListener('click', function() {
     }
 });
 item2.addEventListener('click', function() {
+    if(juegoTerminado){
+        alert ('La partida ha terminado. Por favor, reinicia el juego.');
+        return;
+    }
     if(item2.children.length > 0){
         alert('Esta casilla ya está ocupada');
     } else if (tirada < 9){
@@ -89,6 +98,10 @@ item2.addEventListener('click', function() {
     }
 });
 item3.addEventListener('click', function() {
+    if(juegoTerminado){
+        alert ('La partida ha terminado. Por favor, reinicia el juego.');
+        return;
+    }
     if(item3.children.length > 0){
         alert('Esta casilla ya está ocupada');
     } else if (tirada < 9){
@@ -100,6 +113,10 @@ item3.addEventListener('click', function() {
     }
 });
 item4.addEventListener('click', function() {
+    if(juegoTerminado){
+        alert ('La partida ha terminado. Por favor, reinicia el juego.');
+        return;
+    }
     if(item4.children.length > 0){
         alert('Esta casilla ya está ocupada');
     } else if (tirada < 9){
@@ -111,6 +128,10 @@ item4.addEventListener('click', function() {
     }
 });
 item5.addEventListener('click', function() {
+    if(juegoTerminado){
+        alert ('La partida ha terminado. Por favor, reinicia el juego.');
+        return;
+    }
     if(item5.children.length > 0){
         alert('Esta casilla ya está ocupada');
     } else if (tirada < 9){
@@ -122,6 +143,10 @@ item5.addEventListener('click', function() {
     }
 });
 item6.addEventListener('click', function() {
+    if(juegoTerminado){
+        alert ('La partida ha terminado. Por favor, reinicia el juego.');
+        return;
+    }
     if(item6.children.length > 0){
         alert('Esta casilla ya está ocupada');
     } else if (tirada < 9){
@@ -133,6 +158,10 @@ item6.addEventListener('click', function() {
     }
 });
 item7.addEventListener('click', function() {
+    if(juegoTerminado){
+        alert ('La partida ha terminado. Por favor, reinicia el juego.');
+        return;
+    }
     if(item7.children.length > 0){
         alert('Esta casilla ya está ocupada');
     } else if (tirada < 9){
@@ -144,6 +173,10 @@ item7.addEventListener('click', function() {
     }
 });
 item8.addEventListener('click', function() {
+    if(juegoTerminado){
+        alert ('La partida ha terminado. Por favor, reinicia el juego.');
+        return;
+    }
     if(item8.children.length > 0){
         alert('Esta casilla ya está ocupada');
     } else if (tirada < 9) {
@@ -155,6 +188,10 @@ item8.addEventListener('click', function() {
     }
 });
 item9.addEventListener('click', function() {
+    if(juegoTerminado){
+        alert ('La partida ha terminado. Por favor, reinicia el juego.');
+        return;
+    }
     if(item9.children.length > 0){
         alert('Esta casilla ya está ocupada');
     } else if (tirada < 9){
@@ -184,6 +221,7 @@ const comprobarJuego = () => {
         if (ficha1 && ficha2 && ficha3 && ficha1.classList.contains(ficha2.classList[0]) && ficha1.classList.contains(ficha3.classList[0])) {
             const ganador = ficha1.classList.contains('circulo') ? 'Naranja' : 'Verde';
             alert(`¡Enhorabuena jugador ${ganador}! Has ganado la partida.`);
+            juegoTerminado = true;
             return ganador;
         }
     }
@@ -219,6 +257,7 @@ const pintarFicha = (item) => {
 //Reiniciar partida
 
 btnReiniciar.addEventListener('click', function() {
+    juegoTerminado = false;
     tirada = 0;
     item1.innerHTML = "";
     item2.innerHTML = "";
