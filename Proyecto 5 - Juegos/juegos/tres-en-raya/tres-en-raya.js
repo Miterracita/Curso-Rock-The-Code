@@ -85,7 +85,8 @@ item1.addEventListener('click', function() {
     } else if (tirada < 9){
         pintarFicha(item1);
         tirada++;
-        comprobarJuego(item1);
+        // comprobarJuego(item1);
+        setTimeout(() => comprobarJuego(item1), 0); // Comprueba el juego después de que el navegador haya tenido tiempo de actualizar la UI
     } else {
         alert('Vaya!!! esta partida ya ha terminado. Habéis quedado en tablas.');
     }
@@ -100,7 +101,8 @@ item2.addEventListener('click', function() {
     } else if (tirada < 9){
         pintarFicha(item2);
         tirada++;
-        comprobarJuego(item2);
+        // comprobarJuego(item2);
+        setTimeout(() => comprobarJuego(item2), 0); // Comprueba el juego después de que el navegador haya tenido tiempo de actualizar la UI
     } else {
         alert('Vaya!!! esta partida ya ha terminado. Habéis quedado en tablas.');
     }
@@ -115,7 +117,8 @@ item3.addEventListener('click', function() {
     } else if (tirada < 9){
         pintarFicha(item3);
         tirada++;
-        comprobarJuego(item3);
+        // comprobarJuego(item3);
+        setTimeout(() => comprobarJuego(item3), 0); // Comprueba el juego después de que el navegador haya tenido tiempo de actualizar la UI
     } else {
         alert('Vaya!!! esta partida ya ha terminado. Habéis quedado en tablas.');
     }
@@ -130,7 +133,8 @@ item4.addEventListener('click', function() {
     } else if (tirada < 9){
         pintarFicha(item4);
         tirada++;
-        comprobarJuego(item4);
+        // comprobarJuego(item4);
+        setTimeout(() => comprobarJuego(item4), 0); // Comprueba el juego después de que el navegador haya tenido tiempo de actualizar la UI
     } else {
         alert('Vaya!!! esta partida ya ha terminado. Habéis quedado en tablas.');
     }
@@ -145,7 +149,8 @@ item5.addEventListener('click', function() {
     } else if (tirada < 9){
         pintarFicha(item5);
         tirada++;
-        comprobarJuego(item5);
+        // comprobarJuego(item5);
+        setTimeout(() => comprobarJuego(item5), 0); // Comprueba el juego después de que el navegador haya tenido tiempo de actualizar la UI
     } else {
         alert('Vaya!!! esta partida ya ha terminado. Habéis quedado en tablas.');
     }
@@ -160,7 +165,8 @@ item6.addEventListener('click', function() {
     } else if (tirada < 9){
         pintarFicha(item6);
         tirada++;
-        comprobarJuego(item6);
+        // comprobarJuego(item6);
+        setTimeout(() => comprobarJuego(item6), 0); // Comprueba el juego después de que el navegador haya tenido tiempo de actualizar la UI
     } else {
         alert('Vaya!!! esta partida ya ha terminado. Habéis quedado en tablas.');
     }
@@ -175,7 +181,8 @@ item7.addEventListener('click', function() {
     } else if (tirada < 9){
         pintarFicha(item7);
         tirada++;
-        comprobarJuego(item7);
+        // comprobarJuego(item7);
+        setTimeout(() => comprobarJuego(item7), 0); // Comprueba el juego después de que el navegador haya tenido tiempo de actualizar la UI
     } else {
         alert('Vaya!!! esta partida ya ha terminado. Habéis quedado en tablas.');
     }
@@ -190,7 +197,8 @@ item8.addEventListener('click', function() {
     } else if (tirada < 9) {
         pintarFicha(item8);
         tirada++;
-        comprobarJuego(item8);
+        // comprobarJuego(item8);
+        setTimeout(() => comprobarJuego(item8), 0); // Comprueba el juego después de que el navegador haya tenido tiempo de actualizar la UI
     } else {
         alert('Vaya!!! esta partida ya ha terminado. Habéis quedado en tablas.');
     }
@@ -205,11 +213,35 @@ item9.addEventListener('click', function() {
     } else if (tirada < 9){
         pintarFicha(item9);
         tirada++;
-        comprobarJuego(item9);
+        // comprobarJuego(item9);
+        setTimeout(() => comprobarJuego(item9), 0); // Comprueba el juego después de que el navegador haya tenido tiempo de actualizar la UI
     } else {
         alert('Vaya!!! esta partida ya ha terminado. Habéis quedado en tablas.');
     }
 });
+
+const pintarFicha = (item) => {
+
+    //si el div está vacío
+    if(item.children.length === 0){
+    
+        //si está vacío pintará ficha del jugador que tiene el turno
+
+        if (turno === "naranja"){      
+            item.append(fichaNaranja.cloneNode(true));
+            tVerde.classList.add('turno');
+            tNaranja.classList.remove('turno');
+
+        } else {      
+            item.append(fichaVerde.cloneNode(true));
+            tNaranja.classList.add('turno');
+            tVerde.classList.remove('turno');
+
+        }
+        //actualizará el turno, cambiará al siguiente jugador
+        cambiarTurno();
+    }
+}
 
 //COMPROBAR JUEGO
 const comprobarJuego = () => {
@@ -238,29 +270,6 @@ const comprobarJuego = () => {
         alert('Vaya!!! esta partida ya ha terminado. Habéis quedado en tablas.');
     }
 };
-
-const pintarFicha = (item) => {
-
-    //si el div está vacío
-    if(item.children.length === 0){
-    
-        //si está vacío pintará ficha del jugador que tiene el turno
-
-        if (turno === "naranja"){      
-            item.append(fichaNaranja.cloneNode(true));
-            tVerde.classList.add('turno');
-            tNaranja.classList.remove('turno');
-
-        } else {      
-            item.append(fichaVerde.cloneNode(true));
-            tNaranja.classList.add('turno');
-            tVerde.classList.remove('turno');
-
-        }
-        //actualizará el turno, cambiará al siguiente jugador
-        cambiarTurno();
-    }
-}
 
 //Reiniciar partida
 
