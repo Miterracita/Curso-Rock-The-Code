@@ -52,9 +52,6 @@ h2 {
 h3 {
     text-align: center;
     font-size: 2em;
-    /* font-family: "Rammetto One", sans-serif;
-    font-weight: 400;
-    font-style: normal; */
     font-family: "Open Sans", sans-serif;
     font-style: normal;
 }
@@ -66,9 +63,6 @@ h3 span {
 h4 {
     text-align: center;
     margin: 20px 0;
-    /* font-family: "Rammetto One", sans-serif;
-    font-weight: 400;
-    font-style: normal;*/
     font-size: 1.5em; 
     color: var(--secondary-color);
     font-family: "Open Sans", sans-serif;
@@ -219,17 +213,21 @@ input {
     font-style: normal;
 }
 #mensaje-ganador h5 {
-    font-size: 2.5em;
+    font-size: 2em;
     font-family: "Lilita One", sans-serif;
     font-weight: 400;
     font-style: normal;
     color: white;
-    margin-top:50px
+    margin-top:25px
 }
 
 .box-jugadas {
     display: flex;
     gap: 30px;
+}
+.box-jugadas img{
+    width: 150px;
+    height: 150px;
 }
 .player,
 .machine {
@@ -282,7 +280,11 @@ input {
         width: 95%;
     }
     .box-jugadas {
-        flex-direction: column;
+        gap: 20px;
+    }
+    .box-jugadas img {
+        width: 100px;
+        height: 100px;
     }
     .box-piedra,
     .box-papel,
@@ -290,6 +292,12 @@ input {
         display: flex;
         flex-direction: column;
         align-items: center;
+    }
+    .piedra img,
+    .papel img,
+    .tijera img {
+        width: 100px;
+        height: 100px;
     }
     .seleccion-juego {
         flex-direction: column;
@@ -304,5 +312,8 @@ input {
     }
     #mensaje-ganador h5 {
         font-size: 1.5em;
+    }
+    #mensaje-ganador p {
+        font-size: 2em;
     }
 }

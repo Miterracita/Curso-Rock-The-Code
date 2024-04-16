@@ -34,13 +34,21 @@ let tirada = 0;
 //Seleccionar el turno del jugador al INICIO DE LA PARTIDA
 
 tNaranja.addEventListener('click', function() {
-    turno = "naranja";
-    seleccionTurno();
+    if(!turno) {
+        turno = "naranja";
+        seleccionTurno();
+    } else {
+        alert('El cambio de turno es automático');
+    }
 });
 
 tVerde.addEventListener('click', function() {
-    turno = "verde";
-    seleccionTurno();
+    if(!turno){
+        turno = "verde";
+        seleccionTurno();
+    }else {
+        alert('El cambio de turno es automático');
+    }
 });
 
 const seleccionTurno = () => {
