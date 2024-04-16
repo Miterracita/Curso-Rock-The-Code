@@ -265,8 +265,20 @@ input {
     height: 25px;
     margin-right: 10px;
 }
-
 @media (max-width: 768px){
+    .box-piedra,
+    .box-papel,
+    .box-tijera {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .seleccion-juego {
+        flex-direction: column;
+        padding: 25px;
+    }
+}
+@media (max-width: 1024px){
     h1 {
         font-size: 2em;
     }
@@ -286,22 +298,11 @@ input {
         width: 100px;
         height: 100px;
     }
-    .box-piedra,
-    .box-papel,
-    .box-tijera {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
     .piedra img,
     .papel img,
     .tijera img {
         width: 100px;
         height: 100px;
-    }
-    .seleccion-juego {
-        flex-direction: column;
-        padding: 25px;
     }
     .box-marcador {
         flex-direction: column;
@@ -315,5 +316,14 @@ input {
     }
     #mensaje-ganador p {
         font-size: 2em;
+    }
+}
+
+@media (min-width: 1025px) and (max-width: 1440px){
+    .piedra img,
+    .papel img,
+    .tijera img {
+        width: 120px;
+        height: 120px;
     }
 }
